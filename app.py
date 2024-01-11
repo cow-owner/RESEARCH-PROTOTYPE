@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Global variable to store the scanned QR code data
-qr_code_data = None
+qr_code_data = 1
 
 @app.route('/')
 def index():
