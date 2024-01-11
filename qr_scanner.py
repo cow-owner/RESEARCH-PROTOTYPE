@@ -2,10 +2,10 @@ import requests
 import serial
 
 # Flask server URL
-server_url = "http://192.168.1.2:5000/qr-data"  # Update with your server's IP address
+server_url = "http://10.224.200.103:5000/qr-data"  # Update with your server's IP address
 
 # Set the port for your USB-CDC QR scanner
-serial_port = 'COM4'  # Update with your actual port
+serial_port = 'COM3'  # Update with your actual port
 
 # Open the serial port
 ser = serial.Serial(serial_port, baudrate=9600, timeout=1)
