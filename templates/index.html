@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1>QR Code Scanner</h1>
-    <div id="scanned-data">Now Serving: {% if qr_code_data %} {{ qr_code_data }} {% else %} None {% endif %}</div>
+    <div id="scanned-data">Now Serving: 1 {% if qr_code_data %} {{ qr_code_data }} {% else %} {% endif %}</div>
 
     <script>
         // Function to update the scanned data on the page
@@ -23,7 +23,7 @@
     
         // Poll the server for updates every 2 seconds
         setInterval(() => {
-            fetch('http://10.224.200.103:5000/').then(response => response.text()).then(data => {
+            fetch('http://192.168.1.13:5000/').then(response => response.text()).then(data => {
                 // Extract the relevant data from the HTML response
                 const startTag = '<div id="scanned-data">Now Serving: ';
                 const endTag = '</div>';
